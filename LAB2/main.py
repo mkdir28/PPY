@@ -31,10 +31,10 @@ Write a Python program that takes input from the user to create a list of intege
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
+numbers_list = [int(x) for x in input_numbers.split()]
 
 # Sorting:
-
+numbers_list.sort()
 
 # Print Output
 print("Sorted list:", numbers_list)
@@ -74,10 +74,14 @@ Extend the previous Python program to include tuples. Now, in addition to creati
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
+numbers_list = [int(x) for x in input_numbers.split()]
+sorted_tuple = tuple(map(int, input_numbers.split()))
 
 # Sorting:
-
+numbers_list.sort()
+sorted_tuple=list(sorted_tuple)
+sorted_tuple.sort()
+sorted_tuple = tuple(sorted_tuple)
 
 # Print Output
 print("Sorted list:", numbers_list)
@@ -110,24 +114,31 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = [int(x) for x in input_numbers.split()]
+numbers_tuple = tuple(map(int, input_numbers.split()))
 
 # Manipulate List
 #   Append 10 to the list
 #   Insert 20 at index 2
 #   Remove one elementfrom the list
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
 
 # Attempt to Modify Tuple (this will raise an error)
 try:
     #   Append 10 to the tuple
+    numbers_tuple.append(10)
 except AttributeError:
     print("Tuples are immutable and cannot be modified.")
 try:
     #   Insert 20 at index 2
+    numbers_tuple.insert(2, 20)
 except AttributeError:
     pass  # Insert operation will also raise an error
 try:
     #   Remove one element  from the tuple
+    numbers_tuple.remove(8)
 except AttributeError:
     pass  # Remove operation will also raise an error
 
@@ -194,27 +205,41 @@ Additionally, introduce sets and dictionaries and perform basic operations on th
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
+numbers_list = [int(x) for x in input_numbers.split()]
+numbers_tuple = tuple(map(int, input_numbers.split()))
 
 # Manipulate List
 # Append 10 to the list
 # Insert 20 at index 2
 # Remove the element 8
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
 
 # Attempt to Modify Tuple (this will raise an error)
 try:
     # Append 10 to the tuple
+    numbers_tuple.append(10)
 except AttributeError:
     print("Tuples are immutable and cannot be modified.")
 
 # Set Operations
+additionsl=(10, 11, 12)
+set = {5, 2, 8, 1, 9}
 # Union
+set_union = set.union(additionsl)
 # Intersection
+set_intersection = set.intersection(additionsl)
 # Difference
+set_difference = set.difference(additionsl)
 
 # Dictionary Operations
+numbers_dict = {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
+numbers_dict.update({11: 121})
 # Delete an existing key-value pair
+del numbers_dict [1]
 
 # Print Output
 print("Modified list:", numbers_list)
@@ -269,31 +294,42 @@ print("Updated Dictionary:", numbers_dict)
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = [int(x) for x in input_numbers.split()]
+numbers_tuple = tuple(map(int, input_numbers.split()))
 # Manipulate List
-
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
 # Attempt to Modify Tuple (this will raise an error)
-
+try:
+    # Append 10 to the tuple
+    numbers_tuple.append(10)
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
 # Set Operations
+set_num = {1, 2, 5, 9, 10, 20}
 
 # Dictionary Operations
+numbers_dict = {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
+numbers_dict.update({11: 121})
 # Delete an existing key-value pair
+del numbers_dict [1]
 
 # Type Conversion
-# list_to_tuple =
-# list_to_set =
-# list_to_dict =
-# tuple_to_list =
-# tuple_to_set =
-# tuple_to_dict =
-# set_to_list =
-# set_to_tuple =
-# set_to_dict =
-# dict_to_list =
-# dict_to_tuple =
-# dict_to_set =
+list_to_tuple = tuple(numbers_list)
+list_to_set = set(numbers_list)
+list_to_dict = dict(numbers_list)
+tuple_to_list = list(numbers_tuple)
+tuple_to_set = set(numbers_tuple)
+tuple_to_dict = dict(numbers_tuple)
+set_to_list =  list(set_num)
+set_to_tuple = tuple(set_num)
+set_to_dict = dict(set_num)
+dict_to_list = list(numbers_dict)
+dict_to_tuple = tuple(numbers_dict)
+dict_to_set = set(numbers_dict)
 
 # Print Output
 print("List to Tuple:", list_to_tuple)
@@ -337,46 +373,71 @@ Extend the previous Python program to write the output to a file and perform ope
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = [int(x) for x in input_numbers.split()]
+numbers_tuple = tuple(map(int, input_numbers.split()))
 # Manipulate List
-
+numbers_list.append(10)
+numbers_list.insert(2, 20)
+numbers_list.remove(8)
 # Attempt to Modify Tuple (this will raise an error)
-
+try:
+    # Append 10 to the tuple
+    numbers_tuple.append(10)
+except AttributeError:
+    print("Tuples are immutable and cannot be modified.")
 # Set Operations
+set_num = {1, 2, 5, 9, 10, 20}
 
 # Dictionary Operations
+numbers_dict = {5: 25, 2: 4, 8: 64, 1: 1, 9: 81}
+print("Original Dictionary:", numbers_dict)
+# Add a new key-value pair
+numbers_dict.update({11: 121})
+# Delete an existing key-value pair
+del numbers_dict [1]
 
-# Type Conversion
+list_to_tuple = tuple(numbers_list)
+list_to_set = set(numbers_list)
+list_to_dict = dict(numbers_list)
+tuple_to_list = list(numbers_tuple)
+tuple_to_set = set(numbers_tuple)
+tuple_to_dict = dict(numbers_tuple)
+set_to_list =  list(set_num)
+set_to_tuple = tuple(set_num)
+set_to_dict = dict(set_num)
+dict_to_list = list(numbers_dict)
+dict_to_tuple = tuple(numbers_dict)
+dict_to_set = set(numbers_dict)
 
 student_number = input("Enter your student number: ")
 
 # Write Output to File like this:
-    "Student Number: " + student_number
+#    "Student Number: " + student_number
 
-    "Original List: " + str(numbers_list)
-    "Original Tuple: " + str(numbers_tuple)
-    "Original Set: " + str(numbers_set)
-    "Original Dictionary: " + str(numbers_dict)
+  #  "Original List: " + str(numbers_list)
+  #  "Original Tuple: " + str(numbers_tuple)
+  #  "Original Set: " + str(numbers_set)
+  #  "Original Dictionary: " + str(numbers_dict)
 
-    "Manipulated List: " + str(numbers_list)
-    "Manipulated Tuple: " + str(numbers_tuple)
-    "Union of Set: " + str(set_union)
-    "Intersection of Set: " + str(set_intersection)
-    "Difference of Set: " + str(set_difference)
-    "Updated Dictionary: " + str(numbers_dict)
+  #  "Manipulated List: " + str(numbers_list)
+  #  "Manipulated Tuple: " + str(numbers_tuple)
+  #  "Union of Set: " + str(set_union)
+  #  "Intersection of Set: " + str(set_intersection)
+  #  "Difference of Set: " + str(set_difference)
+  #  "Updated Dictionary: " + str(numbers_dict)
 
-    "List to Tuple: " + str(list_to_tuple)
-    "List to Set: " + str(list_to_set)
-    "List to Dictionary: " + str(list_to_dict)
-    "Tuple to List: " + str(tuple_to_list)
-    "Tuple to Set: " + str(tuple_to_set)
-    "Tuple to Dictionary: " + str(tuple_to_dict)
-    "Set to List: " + str(set_to_list)
-    "Set to Tuple: " + str(set_to_tuple)
-    "Set to Dictionary: " + str(set_to_dict)
-    "Dictionary to List: " + str(dict_to_list)
-    "Dictionary to Tuple: " + str(dict_to_tuple)
-    "Dictionary to Set: " + str(dict_to_set)
+  #  "List to Tuple: " + str(list_to_tuple)
+  #  "List to Set: " + str(list_to_set)
+  #  "List to Dictionary: " + str(list_to_dict)
+  #  "Tuple to List: " + str(tuple_to_list)
+  #  "Tuple to Set: " + str(tuple_to_set)
+ #   "Tuple to Dictionary: " + str(tuple_to_dict)
+  #  "Set to List: " + str(set_to_list)
+   # "Set to Tuple: " + str(set_to_tuple)
+  #  "Set to Dictionary: " + str(set_to_dict)
+  #  "Dictionary to List: " + str(dict_to_list)
+ #   "Dictionary to Tuple: " + str(dict_to_tuple)
+ #   "Dictionary to Set: " + str(dict_to_set)
 
 # print "Content of the file:"
 
